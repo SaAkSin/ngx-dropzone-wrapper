@@ -79,6 +79,8 @@ export interface DropzoneConfigInterface {
   dictFallbackText?: string,
   dictMaxFilesExceeded?: string,
   dictCancelUploadConfirmation?: string
+
+  withCredentials?: boolean;
 }
 
 export class DropzoneConfig implements DropzoneConfigInterface {
@@ -98,7 +100,7 @@ export class DropzoneConfig implements DropzoneConfigInterface {
   resize: any;
   fallback: any;
   renameFilename: any;
-  
+
   previewsContainer: any;
   hiddenInputContainer: any;
 
@@ -131,6 +133,8 @@ export class DropzoneConfig implements DropzoneConfigInterface {
   dictFallbackText: string;
   dictMaxFilesExceeded: string;
   dictCancelUploadConfirmation: string;
+
+  withCredentials: boolean;
 
   constructor(config: DropzoneConfigInterface = {}) {
     this.assign(config);
