@@ -3,7 +3,7 @@
   "description": "Angular wrapper library for Dropzone",
   "bugs": "https://github.com/zefoy/ngx-dropzone-wrapper/issues",
   "license": "MIT",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "main": "bundles/ngx-dropzone-wrapper.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
@@ -39,13 +39,13 @@
     "dropzone": "~4.3.0"
   },
   "devDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@types/node": "~6.0.0",
+    "@angular/common": "^4.0.2",
+    "@angular/compiler": "^4.0.2",
+    "@angular/compiler-cli": "^4.0.2",
+    "@angular/core": "^4.0.2",
+    "@angular/http": "^4.0.2",
+    "@angular/platform-browser": "^4.0.2",
+    "@types/node": "^6.0.46",
     "angular2-inline-template-style": "~1.0.0",
     "angular2-template-loader": "~0.6.0",
     "awesome-typescript-loader": "~3.1.0",
@@ -61,10 +61,10 @@
     "stylelint": "~7.9.0",
     "stylelint-config-standard": "~13.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.1.0",
+    "typescript": "^2.2.2",
     "watch": "~1.0.0",
     "webpack": "~2.3.0",
-    "zone.js": "~0.8.0"
+    "zone.js": "^0.8.4"
   },
   "peerDependencies": {
     "@angular/common": ">=2.0.0",
