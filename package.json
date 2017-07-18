@@ -1,39 +1,29 @@
 {
-  "name": "ngx-dropzone-wrapper",
+  "name": "saaksin-ngx-dropzone-wrapper",
   "description": "Angular wrapper library for Dropzone",
-  "bugs": "https://github.com/zefoy/ngx-dropzone-wrapper/issues",
+  "bugs": "https://github.com/SaAkSin/ngx-dropzone-wrapper/issues",
   "license": "MIT",
-  "version": "4.0.3",
-  "main": "bundles/ngx-dropzone-wrapper.umd.js",
+  "version": "4.0.4",
+  "main": "bundles/saaksin-ngx-dropzone-wrapper.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "tslint": {
-    "extends": "./tslint.json"
-  },
-  "stylelint": {
-    "extends": "./stylelint.json"
-  },
   "scripts": {
     "init": "npm install",
-    "start": "npm run build",
-    "watch": "watch 'npm run build' src/",
-    "clean": "rm -rf dist bundles node_modules",
-    "lint": "npm run lint:js && npm run lint:scss",
     "build": "npm run build:umd && npm run build:aot",
-    "deploy": "npm run build && npm run inline && npm publish",
-    "inline": "ng2-inline --compress -b dist/lib/ -o ./ 'dist/lib/*.js'",
-    "release": "npm version -m 'New release with version %s'",
-    "lint:ts": "tslint 'src/**/*.ts'",
-    "lint:scss": "stylelint 'src/**/*.scss' --syntax scss",
     "build:js": "ngc -p src/tsconfig.json",
     "build:css": "node-sass src/ -o dist/ --source-map=true",
-    "build:html": "cpx src/lib/*.html dist/lib/",
+    "build:html": "copyfiles -f src/lib/*.html dist/lib",
     "build:umd": "webpack --config config/webpack.config.js",
-    "build:aot": "npm run build:js && npm run build:css && npm run build:html"
+    "build:aot": "npm run build:js && npm run build:css && npm run build:html",
+    "example": "npm run example:bundles && npm run example:dist && npm run example:lib",
+    "example:bundles": "copyfiles -f bundles/* example/node_modules/saaksin-ngx-dropzone-wrapper/bundles",
+    "example:dist": "copyfiles -f dist/* example/node_modules/saaksin-ngx-dropzone-wrapper/dist",
+    "example:lib": "copyfiles -f dist/lib/* example/node_modules/saaksin-ngx-dropzone-wrapper/dist/lib",
+    "release": "npm version -m 'New release with version %s'"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zefoy/ngx-dropzone-wrapper.git"
+    "url": "https://github.com/SaAkSin/ngx-dropzone-wrapper.git"
   },
   "dependencies": {
     "dropzone": "~4.3.0"
@@ -61,14 +51,10 @@
     "stylelint": "~7.9.0",
     "stylelint-config-standard": "~13.0.0",
     "tslint": "~4.5.0",
-    "typescript": "^2.2.2",
+    "typescript": "^2.4.0",
     "watch": "~1.0.0",
     "webpack": "~2.3.0",
-    "zone.js": "^0.8.4"
-  },
-  "peerDependencies": {
-    "@angular/common": ">=2.0.0",
-    "@angular/core": ">=2.0.0",
-    "@angular/http": ">=2.0.0"
+    "zone.js": "^0.8.4",
+    "copyfiles": "^1.2.0"
   }
 }

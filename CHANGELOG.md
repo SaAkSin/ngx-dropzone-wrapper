@@ -1,3 +1,7 @@
+4.0.3 Bug fix release 
+
+  - withCredentials 정의 추가
+  
 4.0.2 Bug fix release
 
   - Added the fix for the directive as well

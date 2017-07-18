@@ -1,1 +1,1 @@
-# Example app for the angular2-dropzone-wrapper
+# Example app for the saaksin-ngx-dropzone-wrapper

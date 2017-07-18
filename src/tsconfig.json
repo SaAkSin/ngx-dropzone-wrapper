@@ -10,6 +10,7 @@
     "outDir": "../dist",
     "sourceMap": true,
     "target": "es5",
+    "noStrictGenericChecks": true,
     "typeRoots": [
       "../node_modules/@types"
     ],

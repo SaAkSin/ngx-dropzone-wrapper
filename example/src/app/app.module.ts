@@ -1,11 +1,7 @@
 import { NgModule } from '@angular/core';
-
 import { BrowserModule } from '@angular/platform-browser';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-import { DropzoneModule, DropzoneConfigInterface } from 'ngx-dropzone-wrapper';
-
+import { DropzoneModule, DropzoneConfigInterface } from 'saaksin-ngx-dropzone-wrapper';
 import { AppComponent } from './app.component';
 
 const DROPZONE_CONFIG: DropzoneConfigInterface = {
@@ -19,16 +15,12 @@ const DROPZONE_CONFIG: DropzoneConfigInterface = {
 };
 
 @NgModule({
-    bootstrap: [
-      AppComponent
-    ],
-    declarations: [
-      AppComponent
-    ],
     imports: [
-      BrowserModule,
-      FlexLayoutModule,
-      DropzoneModule.forRoot(DROPZONE_CONFIG)
-    ]
+        BrowserModule,
+        FlexLayoutModule,
+        DropzoneModule.forRoot(DROPZONE_CONFIG)
+    ],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
