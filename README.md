@@ -10,6 +10,7 @@ See a live example application <a href="https://zefoy.github.io/ngx-dropzone-wra
 
     npm install
     npm run build
+    npm run example
 
 ### Running the example
 
@@ -57,6 +58,7 @@ Simply replace the element that would oridinarily be passed to `Dropzone` with t
 
 ```javascript
 [config]          // Custom config to override the global defaults.
+[thumbnails]      // 초기 서버 이미지 지정
 [message]         // Message to show for the user on the upload area.
 [placeholder]     // Placeholder image to be shown as the upload area.
 
@@ -76,11 +78,12 @@ When using only the directive you need to provide your own theming or import the
 Dropzone directive can be used in form or div element with optional custom configuration:
 
 ```html
-<div [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></div>
+<div [dropzone]="config" [thumbnails]="thumbnails" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></div>
 ```
 
 ```javascript
 [dropzone]        // Can be used to provide optional custom config.
+[thumbnails]      // 초기 서버 이미지 지정
 
 (error)           // Event handler for the dropzone upload error event.
 (success)         // Event handler for the dropzone upload success event.
