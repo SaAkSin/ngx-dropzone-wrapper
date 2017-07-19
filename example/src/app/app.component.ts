@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { DropzoneConfigInterface } from 'saaksin-ngx-dropzone-wrapper';
+import { DropzoneConfigInterface, DropzoneThumbnail } from 'saaksin-ngx-dropzone-wrapper';
 
 @Component({
   selector: 'my-app',
@@ -17,7 +17,7 @@ import { DropzoneConfigInterface } from 'saaksin-ngx-dropzone-wrapper';
           <div class="box-title">Component</div>
     
           <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex>
-            <dropzone class="upload-area" [config]="config" [message]="'Click or drag images here to upload'" (instance)="onInstance()" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
+            <dropzone class="upload-area" [config]="config" [thumbnails]="thumbnails" [message]="'Click or drag images here to upload'" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
           </div>
         </div>
     
@@ -25,7 +25,7 @@ import { DropzoneConfigInterface } from 'saaksin-ngx-dropzone-wrapper';
           <div class="box-title">Directive</div>
     
           <div class="content-container" fxLayout="column" fxLayoutAlign="stretch" fxFlex>
-            <div class="upload-area" [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></div>
+            <div class="upload-area" [dropzone]="config" [thumbnails]="thumbnails" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></div>
           </div>
         </div>
       </div>
@@ -83,15 +83,18 @@ import { DropzoneConfigInterface } from 'saaksin-ngx-dropzone-wrapper';
 })
 export class AppComponent {
   dz: any;
+  thumbnails: DropzoneThumbnail[] = [];
 
   public config: DropzoneConfigInterface = {
     params: 'directory=images'
   };
 
-  constructor() {}
+  constructor() {
 
-  onInstance() {
-    console.log('instance');
+  }
+
+  ngOnInit() {
+      this.thumbnails.push( new DropzoneThumbnail('Woman', 100000, 'https://images.pexels.com/photos/90754/woman-portrait-girl-color-90754.jpeg') );
   }
 
   onUploadError(args: any) {
@@ -102,4 +105,5 @@ export class AppComponent {
     console.log('onUploadSuccess:', args);
 
   }
+
 }

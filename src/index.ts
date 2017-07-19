@@ -1,6 +1,6 @@
 export {
   DropzoneComponent, DropzoneDirective,
-  DropzoneConfig, DropzoneConfigInterface,
+  DropzoneConfig, DropzoneConfigInterface, DropzoneThumbnail,
   DropzoneEvents,
   provideDefaultConfig, provideForRootGuard,
   DROPZONE_CONFIG, DROPZONE_GUARD,

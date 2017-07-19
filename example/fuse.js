@@ -15,6 +15,6 @@ fuse.dev({
 
 fuse.bundle('polyfills').target("browser").instructions('> polyfills.ts');
 fuse.bundle('vendor').target("browser").instructions(' ~ main.ts');
-fuse.bundle('app').target("browser").sourceMaps(true).instructions(' !> [main.ts]').watch().hmr();
+fuse.bundle('app').target("browser").sourceMaps(true).instructions(' !> [main.ts]').hmr();
 
 fuse.run();

@@ -1,3 +1,11 @@
+4.0.5 서버 썸네일 불러오기
+
+- thumbnails 추가(초기 실행시 서버에서 이미지 불러오기)
+
+4.0.4 FuseBox
+
+  - 예제 FuseBox 사용
+  
 4.0.3 Bug fix release 
 
   - withCredentials 정의 추가

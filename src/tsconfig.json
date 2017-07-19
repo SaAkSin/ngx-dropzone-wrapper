@@ -24,7 +24,8 @@
     "lib/dropzone.module.ts",
     "lib/dropzone.component.ts",
     "lib/dropzone.directive.ts",
-    "lib/dropzone.interfaces.ts"
+    "lib/dropzone.interfaces.ts",
+    "lib/dropzone.thumbnail.ts"
   ],
   "angularCompilerOptions": {
     "skipMetadataEmit" : false,
