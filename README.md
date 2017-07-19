@@ -18,6 +18,10 @@ See a live example application <a href="https://zefoy.github.io/ngx-dropzone-wra
     npm install
     npm start
 
+### 예제 브라우저 주소
+
+    http://localhost:44444
+
 ### Installing and usage
 
     npm install saaksin-ngx-dropzone-wrapper --save-dev
@@ -58,7 +62,7 @@ Simply replace the element that would oridinarily be passed to `Dropzone` with t
 
 ```javascript
 [config]          // Custom config to override the global defaults.
-[thumbnails]      // 초기 서버 이미지 지정
+[thumbnails]      // 초기 서버 이미지 지정 [{name: '', size: 0, url: ''}]
 [message]         // Message to show for the user on the upload area.
 [placeholder]     // Placeholder image to be shown as the upload area.
 
@@ -83,7 +87,7 @@ Dropzone directive can be used in form or div element with optional custom confi
 
 ```javascript
 [dropzone]        // Can be used to provide optional custom config.
-[thumbnails]      // 초기 서버 이미지 지정
+[thumbnails]      // 초기 서버 이미지 지정 [{name: '', size: 0, url: ''}]
 
 (error)           // Event handler for the dropzone upload error event.
 (success)         // Event handler for the dropzone upload success event.
