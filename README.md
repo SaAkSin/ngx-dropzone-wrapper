@@ -57,7 +57,7 @@ This library provides two ways to create a Dropzone element, simple component an
 Simply replace the element that would oridinarily be passed to `Dropzone` with the dropzone component.
 
 ```html
-<dropzone [config]="config" [message]="'Click or drag images here to upload'" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
+<dropzone [config]="config" [thumbnails]="thumbnails" [message]="'Click or drag images here to upload'" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></dropzone>
 ```
 
 ```javascript

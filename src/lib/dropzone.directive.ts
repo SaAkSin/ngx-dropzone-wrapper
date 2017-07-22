@@ -25,9 +25,11 @@ export class DropzoneDirective {
     @Output('dragover') dz_dragover = new EventEmitter<any>();
     @Output('dragleave') dz_dragleave = new EventEmitter<any>();
     @Output('addedfile') dz_addedfile = new EventEmitter<any>();
+    @Output('addedfiles') dz_addedfiles = new EventEmitter<any>();
     @Output('removedfile') dz_removedfile = new EventEmitter<any>();
     @Output('thumbnail') dz_thumbnail = new EventEmitter<any>();
     @Output('error') dz_error = new EventEmitter<any>();
+    @Output('errormultiple') dz_errormultiple = new EventEmitter<any>();
     @Output('processing') dz_processing = new EventEmitter<any>();
     @Output('uploadprogress') dz_uploadprogress = new EventEmitter<any>();
     @Output('sending') dz_sending = new EventEmitter<any>();

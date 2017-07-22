@@ -1,3 +1,8 @@
+4.0.6 이벤트 추가
+
+- addedfiles
+- errormultiple
+
 4.0.5 서버 썸네일 불러오기
 
 - thumbnails 추가(초기 실행시 서버에서 이미지 불러오기)
