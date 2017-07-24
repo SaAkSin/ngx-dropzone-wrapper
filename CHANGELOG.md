@@ -1,3 +1,7 @@
+4.0.7 Directive dropzone 인스턴스
+
+- public 으로 변경
+
 4.0.6 이벤트 추가
 
 - addedfiles

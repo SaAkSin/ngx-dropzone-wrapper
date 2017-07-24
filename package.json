@@ -3,7 +3,7 @@
   "description": "Angular wrapper library for Dropzone",
   "bugs": "https://github.com/SaAkSin/ngx-dropzone-wrapper/issues",
   "license": "MIT",
-  "version": "4.0.6",
+  "version": "4.0.7",
   "main": "bundles/saaksin-ngx-dropzone-wrapper.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",

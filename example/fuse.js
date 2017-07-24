@@ -3,7 +3,7 @@ const fb = require('fuse-box');
 const fuse = fb.FuseBox.init({
   homeDir: 'src',
   output: 'dist/$name.js',
-  cache: false,
+  cache: true,
   plugins: [
     fb.TypeScriptHelpers()
   ]

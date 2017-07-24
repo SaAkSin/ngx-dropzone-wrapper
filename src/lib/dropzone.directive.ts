@@ -10,7 +10,7 @@ import {DropzoneThumbnail} from "./dropzone.thumbnail";
     selector: '[dropzone]'
 })
 export class DropzoneDirective {
-    private dropzone: any;
+    public dropzone: any;
     private configDiff: any;
 
     @Input() disabled: boolean = false;
